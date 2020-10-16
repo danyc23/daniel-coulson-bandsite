@@ -1,0 +1,252 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.header {
+  height: 263px;
+}
+
+.header__navbar {
+  height: 80px;
+  background-color: #323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header__navbar__link--1 {
+  position: relative;
+  bottom: 0.5rem;
+  right: 0.8rem;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.header__navbar__link--2 {
+  position: relative;
+  bottom: 0.5rem;
+  right: 0.4rem;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.header__navbar__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 0.6rem;
+  margin-bottom: 16px;
+}
+
+.header__navbar__link-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.hero {
+  height: 183px;
+}
+
+.hero__img {
+  background: url(../../assets/Images/concert-1.jpg);
+  height: 183px;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero__text {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 22px;
+  padding-left: 1rem;
+}
+
+.main__bio__header {
+  margin: 2rem 1rem 1.5rem 1rem;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.main__bio__img {
+  background: url(../../assets/Images/Justice-O2-Brixton-Academy-credit-Guifre-de-Peray.jpg);
+  margin: 1.5rem 1rem;
+  width: 18rem;
+  height: 10.125rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.main__bio__quote {
+  margin: 1.5rem 1rem 2rem 1rem;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.main__bio__signature {
+  margin: 2rem 1rem 2.5rem 1rem;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.main__bio__title {
+  margin: 2.5rem 1rem 1.5rem 1rem;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.main__bio__text {
+  margin: 1.5rem 1rem 2.5rem 1rem;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.gallery {
+  background-color: #fafafa;
+}
+
+.gallery__title {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 2rem 1rem 1.5rem 1rem;
+  padding-top: 2rem;
+}
+
+.gallery__img-1 {
+  background-image: url(../../assets/Images/Photo-gallery-1.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 18rem;
+  height: 10.125rem;
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+
+.gallery__img-2 {
+  background-image: url(../../assets/Images/Photo-gallery-2.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 18rem;
+  height: 10.125rem;
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+
+.gallery__img-3 {
+  background-image: url(../../assets/Images/Photo-gallery-3.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 18rem;
+  height: 10.125rem;
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+
+.gallery__img-4 {
+  background: url(../../assets/Images/Photo-gallery-4.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 18rem;
+  height: 10.125rem;
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+
+.gallery__img-5 {
+  background: url(../../assets/Images/Photo-gallery-5.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 18rem;
+  height: 10.125rem;
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+
+.gallery__img-6 {
+  background: url(../../assets/Images/Photo-gallery-6.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 18rem;
+  height: 10.125rem;
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+
+.gallery__img-7 {
+  background: url(../../assets/Images/Photo-gallery-7.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 18rem;
+  height: 10.125rem;
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+
+.gallery__img-8 {
+  background: url(../../assets/Images/Photo-gallery-8.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 18rem;
+  height: 10.125rem;
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+
+.gallery__img-9 {
+  background: url(../../assets/Images/Photo-gallery-9.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 18rem;
+  height: 10.125rem;
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+
+.footer__header {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.footer__social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.instagram-logo {
+  background: url(../../assets/Icons/SVG/Icon-instagram.svg);
+}
+/*# sourceMappingURL=biography.css.map */

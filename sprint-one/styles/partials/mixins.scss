@@ -1,0 +1,27 @@
+@mixin mobile-subheaders {
+  font-size: 14px;
+  line-height: 22px;
+}
+@mixin mobile-header {
+  font-size: 24px;
+  line-height: 32px;
+}
+@mixin mobile-paragraph {
+  font-size: 13px;
+  line-height: 18px;
+}
+@mixin mobile-list-contact {
+  font-size: 13px;
+  line-height: 18px;
+}
+@mixin mobile-label {
+  font-size: 12px;
+  line-height: 20px;
+}
+@mixin gallery-img {
+  background-size: cover;
+  background-position: center;
+  width: 18rem;
+  height: 10.125rem;
+  margin: 1.5rem 1rem 1rem 1rem;
+}
