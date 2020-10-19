@@ -25,3 +25,55 @@
   height: 10.125rem;
   margin: 1.5rem 1rem 1rem 1rem;
 }
+/* ---------------------- mixins for tablet below -------------------*/
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin tablet-hero-header {
+  font-size: 60px;
+  line-height: 68px;
+}
+@mixin tablet-header {
+  font-size: 36px;
+  line-height: 44px;
+}
+@mixin tablet-second-header {
+  font-size: 24px;
+  line-height: 32px;
+}
+@mixin tablet-sub-header {
+  font-size: 16px;
+  line-height: 24px;
+}
+@mixin tablet-paragraph {
+  font-size: 14px;
+  line-height: 22px;
+}
+@mixin tablet-list {
+  font-size: 14px;
+  line-height: 20px;
+}
+@mixin tablet-labels {
+  font-size: 12px;
+  line-height: 20px;
+}
+@mixin tablet-gallery__img-size {
+  width: 14rem;
+  height: 7.875rem;
+  margin-left: 1.5rem;
+  margin-right: 0;
+}
+/* ---------------------- mixins for tablet desktop -------------------*/
+@mixin desktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+@mixin desktop-gallery__img-size {
+  width: 21.5rem;
+  height: 12.06rem;
+  margin: 0 1rem 1rem 0;
+}

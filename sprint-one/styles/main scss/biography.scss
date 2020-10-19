@@ -20,23 +20,64 @@ a {
 }
 .header {
   height: $header-height;
+  @include tablet {
+    height: $tablet-header-height;
+    width: 100%;
+  }
+  @include desktop {
+    height: $desktop-header-height;
+    width: 100%;
+  }
   &__navbar {
     height: $navbar-height;
     background-color: $black;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+    }
+
+    @include desktop {
+      display: flex;
+    }
     &__link--1 {
       position: relative;
       bottom: 0.5rem;
       right: 0.8rem;
       @include mobile-subheaders;
+
+      @include tablet {
+        @include tablet-sub-header;
+        position: relative;
+        left: 0.6rem;
+      }
+      @include desktop {
+        margin-left: 3.5rem;
+      }
     }
     &__link--2 {
       position: relative;
       bottom: 0.5rem;
       right: 0.4rem;
       @include mobile-subheaders;
+
+      @include tablet {
+        position: relative;
+        left: 5rem;
+        @include tablet-sub-header;
+      }
+
+      @include desktop {
+        display: inline-block;
+        position: relative;
+        left: 0.7rem;
+        margin-left: 3.5rem;
+      }
     }
 
     &__img {
@@ -45,10 +86,37 @@ a {
       position: relative;
       top: 0.6rem;
       margin-bottom: 16px;
+
+      @include tablet {
+        position: relative;
+        right: 7rem;
+      }
+
+      @include desktop {
+        position: relative;
+        right: 18.5rem;
+        margin-left: 11.25rem;
+      }
     }
     &__link-section {
       display: flex;
       justify-content: space-around;
+
+      @include tablet {
+        position: relative;
+        right: 19rem;
+        top: 0.6rem;
+      }
+      @include desktop {
+        display: flex;
+      }
+    }
+    &__content {
+      @include desktop {
+        position: relative;
+        right: 32rem;
+        margin-left: 3.5rem;
+      }
     }
   }
 }
@@ -62,95 +130,413 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include tablet {
+      height: $tablet-hero-height;
+    }
+    @include desktop {
+      height: $desktop-hero-height;
+    }
   }
   &__text {
     color: $white;
     @include mobile-subheaders;
     padding-left: 1rem;
+
+    @include tablet {
+      padding-left: 1.5rem;
+      @include tablet-hero-header;
+    }
+    @include desktop {
+      margin-left: 11.25rem;
+    }
   }
 }
 .main__bio {
   &__header {
     margin: 2rem 1rem 1.5rem 1rem;
     @include mobile-header;
+
+    @include tablet {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      @include tablet-second-header;
+    }
+
+    @include desktop {
+      margin: 3rem 11.25rem;
+    }
   }
   &__img {
     background: url(../../assets/Images/Justice-O2-Brixton-Academy-credit-Guifre-de-Peray.jpg);
-    margin: 1.5rem 1rem;
+    margin: 1.5rem 1.5rem;
     width: 18rem;
     height: 10.125rem;
     background-position: center;
     background-size: cover;
+
+    @include tablet {
+      margin-left: 1.5rem;
+      width: 45rem;
+      height: 22.625rem;
+      background-position: center;
+      background-size: cover;
+    }
+    @include desktop {
+      margin: 3rem 17rem;
+      width: 56rem;
+      height: 28.125rem;
+    }
   }
   &__quote {
     margin: 1.5rem 1rem 2rem 1rem;
     @include mobile-subheaders;
+
+    @include tablet {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      @include tablet-second-header;
+    }
+    @include desktop {
+      margin: 3rem 17rem 2.5rem 17rem;
+    }
   }
   &__signature {
     margin: 2rem 1rem 2.5rem 1rem;
     @include mobile-subheaders;
+
+    @include tablet {
+      margin-left: 1.5rem;
+      @include tablet-sub-header;
+    }
+    @include desktop {
+      margin: 2.5rem 17rem 3.5rem 17rem;
+    }
   }
   &__title {
     margin: 2.5rem 1rem 1.5rem 1rem;
     @include mobile-subheaders;
+
+    @include tablet {
+      margin-left: 1.5rem;
+      @include tablet-second-header;
+    }
+    @include desktop {
+      margin: 3.5rem 17rem 2rem 17rem;
+    }
+  }
+  &__paragraph {
+    @include tablet {
+      display: flex;
+      margin-right: 1.5rem;
+    }
+    @include desktop {
+      margin: 2rem 17rem 2.5rem 17rem;
+    }
   }
   &__text {
     margin: 1.5rem 1rem 2.5rem 1rem;
     @include mobile-paragraph;
+
+    @include tablet {
+      @include tablet-paragraph;
+      margin-right: 0;
+      margin-left: 1.5rem;
+    }
+    @include desktop {
+      margin-left: 0;
+    }
+    &--right {
+      @include tablet {
+        margin-left: 1.5rem;
+      }
+      @include desktop {
+        margin-left: 2.5rem;
+      }
+    }
   }
 }
 .gallery {
   background-color: $gallery-color;
+
+  @include desktop {
+    padding-bottom: 1.5rem;
+  }
+
   &__title {
     @include mobile-header;
     margin: 2rem 1rem 1.5rem 1rem;
     padding-top: 2rem;
+
+    @include tablet {
+      @include tablet-second-header;
+      margin-left: 1.5rem;
+    }
+
+    @include desktop {
+      margin: 2.5rem 11.25rem 4rem 11.25rem;
+    }
   }
-  &__img-1 {
-    background-image: url(../../assets/Images/Photo-gallery-1.jpg);
-    @include gallery-img;
-  }
-  &__img-2 {
-    background-image: url(../../assets/Images/Photo-gallery-2.jpg);
-    @include gallery-img;
-  }
-  &__img-3 {
-    background-image: url(../../assets/Images/Photo-gallery-3.jpg);
-    @include gallery-img;
-  }
-  &__img-4 {
-    background: url(../../assets/Images/Photo-gallery-4.jpg);
-    @include gallery-img;
-  }
-  &__img-5 {
-    background: url(../../assets/Images/Photo-gallery-5.jpg);
-    @include gallery-img;
-  }
-  &__img-6 {
-    background: url(../../assets/Images/Photo-gallery-6.jpg);
-    @include gallery-img;
-  }
-  &__img-7 {
-    background: url(../../assets/Images/Photo-gallery-7.jpg);
-    @include gallery-img;
-  }
-  &__img-8 {
-    background: url(../../assets/Images/Photo-gallery-8.jpg);
-    @include gallery-img;
-  }
-  &__img-9 {
-    background: url(../../assets/Images/Photo-gallery-9.jpg);
-    @include gallery-img;
+  &__img {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-right: 1.5rem;
+    }
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 4rem 11.25rem 2.5rem 11.25rem;
+      padding: 0;
+    }
+
+    &-1 {
+      background-image: url(../../assets/Images/Photo-gallery-1.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-2 {
+      background-image: url(../../assets/Images/Photo-gallery-2.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-3 {
+      background-image: url(../../assets/Images/Photo-gallery-3.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-4 {
+      background: url(../../assets/Images/Photo-gallery-4.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-5 {
+      background: url(../../assets/Images/Photo-gallery-5.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-6 {
+      background: url(../../assets/Images/Photo-gallery-6.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-7 {
+      background: url(../../assets/Images/Photo-gallery-7.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-8 {
+      background: url(../../assets/Images/Photo-gallery-8.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-9 {
+      background: url(../../assets/Images/Photo-gallery-9.jpg);
+      @include gallery-img;
+      margin-bottom: 2.5rem;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
   }
 }
 .footer {
+  background-color: $black;
+  color: $white;
+  padding-left: 1rem;
+
+  @include tablet {
+    padding-left: 1.5rem;
+  }
+
+  @include desktop {
+    padding: 3rem 11.25rem 3.5rem 11.25rem;
+  }
+  &__logo {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      margin-right: 1.5rem;
+    }
+
+    @include desktop {
+      width: 7.5rem;
+    }
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &--left {
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &--right {
+      display: flex;
+    }
+  }
   &__header {
     @include mobile-header;
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+      @include tablet-second-header;
+    }
+  }
+  &__bottom {
+    margin-top: 1rem;
+    padding-bottom: 2rem;
   }
   &__social-media {
     display: flex;
+    @include tablet {
+      position: relative;
+      left: 7.5rem;
+    }
+    &__logo {
+      margin-left: 1rem;
+
+      @include tablet {
+        display: flex;
+        margin-left: 1.5rem;
+      }
+      @include desktop {
+        margin-right: 2rem;
+      }
+    }
+    @include tablet {
+      display: flex;
+      position: relative;
+      // top: 2.5rem;
+    }
+  }
+  &__copyright {
+    @include tablet {
+      display: flex;
+    }
+    &--right {
+      @include tablet {
+        padding-left: 0.5rem;
+      }
+    }
   }
 }
-.instagram-logo {
-  background: url(../../assets/Icons/SVG/Icon-instagram.svg);
+.contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include mobile-list-contact;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
+  &__section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    @include tablet {
+      width: 14rem;
+      margin-right: 1.5rem;
+    }
+
+    @include desktop {
+      margin-right: 3.5rem;
+    }
+    &__name {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      @include tablet {
+        @include tablet-sub-header;
+      }
+
+      @include desktop {
+        margin-bottom: 1.5rem;
+      }
+    }
+    &__address {
+      @include tablet {
+        @include tablet-list;
+      }
+    }
+    &__email {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      @include tablet {
+        @include tablet-list;
+      }
+
+      @include desktop {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
 }
