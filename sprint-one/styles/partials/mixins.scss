@@ -1,18 +1,26 @@
 @mixin mobile-subheaders {
   font-size: 14px;
   line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
 }
 @mixin mobile-header {
   font-size: 24px;
   line-height: 32px;
+  font-family: "avenir";
+  font-weight: bold;
 }
 @mixin mobile-paragraph {
   font-size: 13px;
   line-height: 18px;
+  font-family: "avenir";
+  font-weight: normal;
 }
 @mixin mobile-list-contact {
   font-size: 13px;
   line-height: 18px;
+  font-family: "avenir";
+  font-weight: bold;
 }
 @mixin mobile-label {
   font-size: 12px;
@@ -35,26 +43,38 @@
 @mixin tablet-hero-header {
   font-size: 60px;
   line-height: 68px;
+  font-family: "avenir";
+  font-weight: bolder;
 }
 @mixin tablet-header {
   font-size: 36px;
   line-height: 44px;
+  font-family: "avenir";
+  font-weight: bolder;
 }
 @mixin tablet-second-header {
   font-size: 24px;
   line-height: 32px;
+  font-family: "avenir";
+  font-weight: bolder;
 }
 @mixin tablet-sub-header {
   font-size: 16px;
   line-height: 24px;
+  font-family: "avenir";
+  font-weight: bolder;
 }
 @mixin tablet-paragraph {
   font-size: 14px;
   line-height: 22px;
+  font-family: "avenir";
+  font-weight: normal;
 }
 @mixin tablet-list {
   font-size: 14px;
   line-height: 20px;
+  font-family: "avenir";
+  font-weight: bold;
 }
 @mixin tablet-labels {
   font-size: 12px;
@@ -66,7 +86,7 @@
   margin-left: 1.5rem;
   margin-right: 0;
 }
-/* ---------------------- mixins for tablet desktop -------------------*/
+/* ---------------------- mixins for desktop -------------------*/
 @mixin desktop {
   @media (min-width: 1440px) {
     @content;
