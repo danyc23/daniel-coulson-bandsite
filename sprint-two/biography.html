@@ -77,6 +77,40 @@
           <div class="gallery__img-9 tablet-gallery__img-size"></div>
         </div>
       </section>
+      <section class="comments-section">
+        <h2 class="comments-section__title">Join the conversation</h2>
+        <section class="comments-form__top">
+          <div class="comments-form__img-section">
+            <div class="comments-form__img"></div>
+          </div>
+          <form action="URL" method="POST" class="comments-form__container">
+            <label for="name" class="comments-form__container-name">NAME</label>
+            <input
+              class="comments-form__name-input"
+              name="name"
+              required="required"
+            />
+            <label for="comments" class="comments-form__container-comments">
+              COMMENT</label
+            >
+            <textarea
+              name="comments"
+              id="comments-area"
+              cols="30"
+              rows="10"
+              placeholder="Describe yourself here..."
+              required="required"
+            >
+            </textarea>
+            <div class="comments-btn__container">
+              <input type="submit" id="commentsButton" value="COMMENT" />
+            </div>
+          </form>
+        </section>
+        <section class="posted__comments-section">
+          <ul class="comments__list"></ul>
+        </section>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__top">
@@ -152,5 +186,6 @@
         </section>
       </div>
     </footer>
+    <script src="./scripts/biography.js"></script>
   </body>
 </html>

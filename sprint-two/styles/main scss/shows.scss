@@ -344,19 +344,162 @@ a {
 }
 .shows-section {
   padding: 0 1rem;
+  margin-bottom: 2rem;
+
+  @include tablet {
+    margin-left: 1.5rem;
+  }
 
   @include desktop {
     padding: 0;
+    display: flex;
   }
 
   &__title {
     margin: 2rem 0 2.5rem 0;
+    @include mobile-header;
 
     @include tablet {
-      margin: 0 1.5rem 0 1.5rem;
+      margin-right: 1.5rem;
+      @include tablet-header;
     }
     @include desktop {
-      margin: 3rem 11.25rem 0 11.25rem;
+      margin: 2.1rem 11.25rem 0 11.25rem;
     }
+  }
+}
+
+.concert {
+  border-bottom: 2px solid #e1e1e1;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include tablet-sub-header;
+  }
+  @include desktop {
+    display: flex;
+  }
+}
+
+.date-container {
+  @include tablet {
+    width: 20%;
+  }
+}
+
+.concert-date {
+  margin: 1rem 0 1.5rem 0;
+  @include mobile-subheaders;
+  font-weight: bolder;
+  &-title {
+    margin: 2.5rem 0 1rem 0;
+    @include mobile-subheaders;
+    color: #afafaf;
+    font-weight: bolder;
+    @include tablet {
+      display: none;
+      margin: 0;
+      @include tablet-second-header;
+      font-weight: bolder;
+    }
+  }
+}
+
+.venue {
+  margin: 1rem 0 1.5rem 0;
+  @include mobile-subheaders;
+  font-weight: bolder;
+  &-title {
+    @include mobile-subheaders;
+    color: #afafaf;
+    @include tablet {
+      display: none;
+    }
+  }
+  &-container {
+    @include tablet {
+      width: 20%;
+    }
+  }
+}
+
+.location {
+  margin: 1rem 0 1.5rem 0;
+  @include mobile-subheaders;
+  font-weight: bolder;
+  &-title {
+    @include mobile-subheaders;
+    font-weight: bolder;
+    color: #afafaf;
+    @include tablet {
+      display: none;
+    }
+  }
+  &-container {
+    @include tablet {
+      width: 22%;
+    }
+  }
+}
+.btn-concert {
+  margin: 2rem 1rem 1rem 0;
+  width: 17rem;
+  height: 3rem;
+  background-color: $black;
+  color: $white;
+
+  @include tablet {
+    width: 10rem;
+    border-radius: 6px;
+  }
+  @include desktop {
+    padding: 1rem;
+    width: 12rem;
+    text-align: center;
+  }
+}
+
+.first-title {
+  display: none;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    @include tablet-sub-header;
+    color: #afafaf;
+  }
+  @include desktop {
+    margin-bottom: 2.5rem;
+  }
+}
+.date-first-title {
+  @include tablet {
+  }
+}
+.venue-first-title {
+  @include tablet {
+    position: relative;
+    right: 17.5%;
+  }
+  @include desktop {
+    position: relative;
+    right: 19.3%;
+  }
+}
+.location-first-title {
+  @include tablet {
+    position: relative;
+    right: 36.48%;
+  }
+  @include desktop {
+    position: relative;
+    right: 40%;
+  }
+}
+#show-list-container {
+  @include desktop {
+    margin: 3rem 11.25rem 2.5rem 0;
+    width: 75%;
   }
 }

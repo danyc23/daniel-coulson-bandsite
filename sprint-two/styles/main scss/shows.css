@@ -602,27 +602,255 @@ a:hover {
 
 .shows-section {
   padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .shows-section {
+    margin-left: 1.5rem;
+  }
 }
 
 @media (min-width: 1440px) {
   .shows-section {
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
 .shows-section__title {
   margin: 2rem 0 2.5rem 0;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "avenir";
+  font-weight: bold;
 }
 
 @media (min-width: 768px) {
   .shows-section__title {
-    margin: 0 1.5rem 0 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 36px;
+    line-height: 44px;
+    font-family: "avenir";
+    font-weight: bolder;
   }
 }
 
 @media (min-width: 1440px) {
   .shows-section__title {
-    margin: 3rem 11.25rem 0 11.25rem;
+    margin: 2.1rem 11.25rem 0 11.25rem;
+  }
+}
+
+.concert {
+  border-bottom: 2px solid #e1e1e1;
+}
+
+@media (min-width: 768px) {
+  .concert {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "avenir";
+    font-weight: bolder;
+  }
+}
+
+@media (min-width: 1440px) {
+  .concert {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .date-container {
+    width: 20%;
+  }
+}
+
+.concert-date {
+  margin: 1rem 0 1.5rem 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
+  font-weight: bolder;
+}
+
+.concert-date-title {
+  margin: 2.5rem 0 1rem 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
+  color: #afafaf;
+  font-weight: bolder;
+}
+
+@media (min-width: 768px) {
+  .concert-date-title {
+    display: none;
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "avenir";
+    font-weight: bolder;
+    font-weight: bolder;
+  }
+}
+
+.venue {
+  margin: 1rem 0 1.5rem 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
+  font-weight: bolder;
+}
+
+.venue-title {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
+  color: #afafaf;
+}
+
+@media (min-width: 768px) {
+  .venue-title {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .venue-container {
+    width: 20%;
+  }
+}
+
+.location {
+  margin: 1rem 0 1.5rem 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
+  font-weight: bolder;
+}
+
+.location-title {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
+  font-weight: bolder;
+  color: #afafaf;
+}
+
+@media (min-width: 768px) {
+  .location-title {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .location-container {
+    width: 22%;
+  }
+}
+
+.btn-concert {
+  margin: 2rem 1rem 1rem 0;
+  width: 17rem;
+  height: 3rem;
+  background-color: #323232;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .btn-concert {
+    width: 10rem;
+    border-radius: 6px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .btn-concert {
+    padding: 1rem;
+    width: 12rem;
+    text-align: center;
+  }
+}
+
+.first-title {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .first-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "avenir";
+    font-weight: bolder;
+    color: #afafaf;
+  }
+}
+
+@media (min-width: 1440px) {
+  .first-title {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .venue-first-title {
+    position: relative;
+    right: 17.5%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .venue-first-title {
+    position: relative;
+    right: 19.3%;
+  }
+}
+
+@media (min-width: 768px) {
+  .location-first-title {
+    position: relative;
+    right: 36.48%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .location-first-title {
+    position: relative;
+    right: 40%;
+  }
+}
+
+@media (min-width: 1440px) {
+  #show-list-container {
+    margin: 3rem 11.25rem 2.5rem 0;
+    width: 75%;
   }
 }
 /*# sourceMappingURL=shows.css.map */

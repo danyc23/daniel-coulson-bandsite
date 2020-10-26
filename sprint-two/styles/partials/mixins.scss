@@ -16,6 +16,12 @@
   font-family: "avenir";
   font-weight: normal;
 }
+@mixin mobile-paragraph--comments {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "avenir";
+  font-weight: bolder;
+}
 @mixin mobile-list-contact {
   font-size: 13px;
   line-height: 18px;
@@ -69,6 +75,12 @@
   line-height: 22px;
   font-family: "avenir";
   font-weight: normal;
+}
+@mixin tablet-paragraph--comments {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: bolder;
 }
 @mixin tablet-list {
   font-size: 14px;
