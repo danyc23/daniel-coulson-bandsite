@@ -54,3 +54,68 @@ form.addEventListener("submit", (event) => {
 
   event.target.reset();
 });
+
+// test
+const commentArray = [
+  {
+    name: "Daniel",
+    timeStamp: Date.now(),
+    comment: "Hi my name is Daniel",
+  },
+  {
+    name: "Edwin",
+    timeStamp: Date.now(),
+    comment: "Hi my name is Edwin",
+  },
+  {
+    name: "Ari",
+    timeStamp: Date.now(),
+    comment: "Hi my name is Ari",
+  },
+];
+
+let addComment = function (comment, placeToPut) {
+  commentArray.forEach(function (comment) {
+    // create a new li
+    let li = document.createElement("li");
+    li.className = "posted__comments__box";
+    //create a new div
+    let divContainer = document.createElement("div");
+    //create a div that holds the image of the person that comments
+    let profileImg = document.createElement("div");
+    profileImg.className = "person-img";
+    //creating a new paragraph that is going to hold the name
+    let nameElem = document.createElement("p");
+    nameElem.innerText = comment.name;
+    //creating a new paragraph that is going to hold the date
+    let dateElem = document.createElement("p");
+    dateElem.innerText = comment.timeStamp;
+    // creating a new paragraph hold the comment
+    let commentElem = document.createElement("p");
+    //giving the value of the comment
+    commentElem.innerText = comment.comment;
+    // creating a div that is going to contain the name, date
+    let commentContainer = document.createElement("div");
+    commentContainer.className = "posted__comments-top";
+    //creating a div that is going to hold the comment holder
+    let commentsDivBottom = document.createElement("div");
+    //giving a class to commentsDivBottom
+    commentsDivBottom.className = "comments-div-bottom";
+    // appeding both p to its div
+    divContainer.appendChild(nameElem);
+    divContainer.appendChild(dateElem);
+    // appeding the element the div to the li
+    commentContainer.appendChild(divContainer);
+    //appending comment container to divcontainer
+    li.appendChild(profileImg);
+    li.appendChild(divContainer);
+    li.appendChild(commentsDivBottom);
+    //appending the comment box to the bottom div
+    commentsDivBottom.appendChild(commentElem);
+
+    // appending the li to the ul
+    commentList.appendChild(li);
+  });
+};
+addComment(commentArray, commentList);
+//test
