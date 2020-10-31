@@ -1,0 +1,856 @@
+/* -------------------------------- */
+/* -------------------------------- */
+/* ---------------------- mixins for tablet below -------------------*/
+/* ---------------------- mixins for desktop -------------------*/
+@font-face {
+  src: url(../project-font/transfonter.org-20201019-234030/AvenirNextLTPro-Regular.woff2);
+  font-family: "avenir";
+  font-weight: normal;
+}
+
+@font-face {
+  src: url(../project-font/transfonter.org-20201019-234030/AvenirNextLTPro-Demi.woff2);
+  font-family: "avenir";
+  font-weight: semi-bold;
+}
+
+@font-face {
+  src: url(../project-font/transfonter.org-20201019-234030/AvenirNextLTPro-Bold.woff2);
+  font-family: "avenir";
+  font-weight: bolder;
+}
+
+@font-face {
+  src: url(../project-font/transfonter.org-20201019-234030/AvenirNextLTPro-Thin.woff2);
+  font-family: "avenir";
+  font-weight: thin;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.header {
+  height: 34.5rem;
+  background-color: #323232;
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 46.875rem;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    height: 750px;
+    width: 100%;
+  }
+}
+
+.header__navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 5rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .header__navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.header__navbar__img {
+  text-align: center;
+  position: relative;
+  top: 0.6rem;
+}
+
+@media (min-width: 768px) {
+  .header__navbar__img {
+    margin-left: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__navbar__img {
+    margin-left: 11.25rem;
+  }
+}
+
+.header__navbar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 1rem;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
+}
+
+@media (min-width: 768px) {
+  .header__navbar__list {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "avenir";
+    font-weight: bolder;
+    position: absolute;
+    left: 13rem;
+    top: 1.2rem;
+  }
+}
+
+.header__navbar__list__item {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .header__navbar__list__item--2 {
+    margin-left: 4rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__navbar__list__item--2 {
+    margin-left: 3.5rem;
+    padding-bottom: 1.2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__navbar__list {
+    margin-left: 9rem;
+  }
+}
+
+.border__bottom {
+  border-bottom: 4px solid #ffffff;
+}
+
+.hero {
+  height: 29.5rem;
+  background: url(../../assets/Images/Photo-gallery-7.jpg);
+  height: 29.5rem;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 41.875rem;
+  }
+}
+
+.hero__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 4rem;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero__img {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero__img {
+    height: 670px;
+    padding-top: 0;
+    margin-left: 11.25rem;
+    margin-right: 11.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero__img__top-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 10rem;
+  }
+}
+
+.hero__text {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "avenir";
+  font-weight: bold;
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero__text {
+    padding-left: 1.5rem;
+    font-size: 60px;
+    line-height: 68px;
+    font-family: "avenir";
+    font-weight: bolder;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero__text {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.hero__text--1 {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
+}
+
+@media (min-width: 768px) {
+  .hero__text--1 {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "avenir";
+    font-weight: bolder;
+    padding-top: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero__text--1 {
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__text--2 {
+    width: 75%;
+    margin-top: 1.5rem;
+  }
+}
+
+.hero__song {
+  margin-top: 4rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero__song {
+    width: 65%;
+    padding-left: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero__song {
+    padding: 0;
+    width: 100%;
+    position: relative;
+    top: 25%;
+    height: 9.125rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero__song__reproducer {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero__container {
+    width: 31.25rem;
+  }
+}
+
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    padding: 3rem 11.25rem 3.5rem 11.25rem;
+  }
+}
+
+.footer__logo {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .footer__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer__logo {
+    width: 7.5rem;
+  }
+}
+
+.footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .footer__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__top--left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.footer__top--right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__header {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "avenir";
+  font-weight: bold;
+  padding-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer__header {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "avenir";
+    font-weight: bolder;
+  }
+}
+
+.footer__bottom {
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.footer__social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .footer__social-media {
+    position: relative;
+    left: 7.5rem;
+  }
+}
+
+.footer__social-media__logo {
+  margin-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer__social-media__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer__social-media__logo {
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+}
+
+.footer__copyright {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "avenir";
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .footer__copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "avenir";
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__copyright--right {
+    padding-left: 0.5rem;
+  }
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "avenir";
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.contact__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .contact__section {
+    width: 14rem;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contact__section {
+    margin-right: 3.5rem;
+  }
+}
+
+.contact__section__name {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "avenir";
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .contact__section__name {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "avenir";
+    font-weight: bolder;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contact__section__name {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact__section__address {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "avenir";
+    font-weight: bold;
+  }
+}
+
+.contact__section__email {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .contact__section__email {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "avenir";
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contact__section__email {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.shows-section {
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .shows-section {
+    margin-left: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .shows-section {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.shows-section__title {
+  margin: 2rem 0 2.5rem 0;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "avenir";
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .shows-section__title {
+    margin-right: 1.5rem;
+    font-size: 36px;
+    line-height: 44px;
+    font-family: "avenir";
+    font-weight: bolder;
+  }
+}
+
+@media (min-width: 1440px) {
+  .shows-section__title {
+    margin: 2.1rem 11.25rem 0 11.25rem;
+  }
+}
+
+.concert {
+  border-bottom: 2px solid #e1e1e1;
+}
+
+@media (min-width: 768px) {
+  .concert {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "avenir";
+    font-weight: bolder;
+  }
+}
+
+@media (min-width: 1440px) {
+  .concert {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .date-container {
+    width: 20%;
+  }
+}
+
+.concert-date {
+  margin: 1rem 0 1.5rem 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
+  font-weight: bolder;
+}
+
+.concert-date-title {
+  margin: 2.5rem 0 1rem 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
+  color: #afafaf;
+  font-weight: bolder;
+}
+
+@media (min-width: 768px) {
+  .concert-date-title {
+    display: none;
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "avenir";
+    font-weight: bolder;
+    font-weight: bolder;
+  }
+}
+
+.venue {
+  margin: 1rem 0 1.5rem 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
+  font-weight: bolder;
+}
+
+.venue-title {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
+  color: #afafaf;
+}
+
+@media (min-width: 768px) {
+  .venue-title {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .venue-container {
+    width: 20%;
+  }
+}
+
+.location {
+  margin: 1rem 0 1.5rem 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
+  font-weight: bolder;
+}
+
+.location-title {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  font-weight: semi-bold;
+  font-weight: bolder;
+  color: #afafaf;
+}
+
+@media (min-width: 768px) {
+  .location-title {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .location-container {
+    width: 22%;
+  }
+}
+
+.btn-concert {
+  margin: 2rem 1rem 1rem 0;
+  width: 17rem;
+  height: 3rem;
+  background-color: #323232;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .btn-concert {
+    width: 10rem;
+    border-radius: 6px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .btn-concert {
+    padding: 1rem;
+    width: 12rem;
+    text-align: center;
+  }
+}
+
+.first-title {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .first-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "avenir";
+    font-weight: bolder;
+    color: #afafaf;
+  }
+}
+
+@media (min-width: 1440px) {
+  .first-title {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .venue-first-title {
+    position: relative;
+    right: 17.5%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .venue-first-title {
+    position: relative;
+    right: 19.3%;
+  }
+}
+
+@media (min-width: 768px) {
+  .location-first-title {
+    position: relative;
+    right: 36.48%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .location-first-title {
+    position: relative;
+    right: 40%;
+  }
+}
+
+@media (min-width: 1440px) {
+  #show-list-container {
+    margin: 3rem 11.25rem 2.5rem 0;
+    width: 75%;
+  }
+}
+/*# sourceMappingURL=shows.css.map */

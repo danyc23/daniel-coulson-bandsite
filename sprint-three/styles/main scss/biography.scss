@@ -1,0 +1,758 @@
+@import "../partials/variables.scss";
+@import "../partials/mixins.scss";
+@import "../partials/typography.scss";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-width: 320px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: $white;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.header {
+  height: $header-height;
+  background-color: $black;
+  @include tablet {
+    height: $tablet-header-height;
+    width: 100%;
+  }
+  @include desktop {
+    height: $desktop-header-height;
+    width: 100%;
+  }
+  &__navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 5rem;
+    width: 100%;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__img {
+      text-align: center;
+      position: relative;
+      top: 0.6rem;
+
+      @include tablet {
+        margin-left: 1.5rem;
+        display: flex;
+        vertical-align: middle;
+      }
+
+      @include desktop {
+        margin-left: 11.25rem;
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1rem;
+      @include mobile-subheaders;
+
+      @include tablet {
+        @include tablet-sub-header;
+        position: absolute;
+        left: 13rem;
+        top: 1.2rem;
+      }
+
+      &__item {
+        width: 50%;
+        text-align: center;
+        padding-bottom: 1rem;
+        &--2 {
+          @include tablet {
+            margin-left: 4rem;
+          }
+
+          @include desktop {
+            margin-left: 3.5rem;
+            padding-bottom: 1.2rem;
+          }
+        }
+      }
+      @include desktop {
+        margin-left: 9rem;
+      }
+    }
+  }
+}
+.border__bottom {
+  border-bottom: 4px solid $white;
+}
+.hero {
+  height: $hero-height;
+  &__img {
+    background: url(../../assets/Images/concert-1.jpg);
+    height: $hero-height;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tablet {
+      height: $tablet-hero-height;
+    }
+    @include desktop {
+      height: $desktop-hero-height;
+      width: 100%;
+    }
+  }
+  &__text {
+    color: $white;
+    @include mobile-header;
+    padding-left: 1rem;
+
+    @include tablet {
+      padding-left: 1.5rem;
+      @include tablet-hero-header;
+    }
+    @include desktop {
+      margin-left: 11.25rem;
+      padding: 0;
+    }
+  }
+}
+.main__bio {
+  &__header {
+    margin: 2rem 1rem 1.5rem 1rem;
+    @include mobile-header;
+    color: $black;
+
+    @include tablet {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      @include tablet-second-header;
+    }
+
+    @include desktop {
+      margin: 3rem 11.25rem;
+    }
+  }
+  &__img {
+    background: url(../../assets/Images/Justice-O2-Brixton-Academy-credit-Guifre-de-Peray.jpg);
+    margin: 1.5rem 1rem;
+    width: 90vw;
+    height: 10.125rem;
+    background-position: center;
+    background-size: cover;
+
+    @include tablet {
+      margin-left: 1.5rem;
+      width: 94vw;
+      height: 22.625rem;
+      background-position: center;
+      background-size: cover;
+    }
+    @include desktop {
+      margin: 3rem 17rem;
+      width: 56rem;
+      height: 28.125rem;
+    }
+  }
+  &__quote {
+    margin: 1.5rem 1rem 2rem 1rem;
+    @include mobile-subheaders;
+    color: $black;
+
+    @include tablet {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      @include tablet-second-header;
+    }
+    @include desktop {
+      margin: 3rem 17rem 2.5rem 17rem;
+    }
+  }
+  &__signature {
+    margin: 2rem 1rem 2.5rem 1rem;
+    @include mobile-subheaders;
+    color: $black;
+
+    @include tablet {
+      margin-left: 1.5rem;
+      @include tablet-second-header;
+    }
+    @include desktop {
+      margin: 2.5rem 17rem 3.5rem 17rem;
+    }
+  }
+  &__title {
+    margin: 2.5rem 1rem 1.5rem 1rem;
+    @include mobile-subheaders;
+    color: $black;
+
+    @include tablet {
+      margin-left: 1.5rem;
+      @include tablet-second-header;
+    }
+    @include desktop {
+      margin: 3.5rem 17rem 2rem 17rem;
+    }
+  }
+  &__paragraph {
+    @include tablet {
+      display: flex;
+      margin-right: 1.5rem;
+    }
+    @include desktop {
+      margin: 2rem 17rem 2.5rem 17rem;
+    }
+  }
+  &__text {
+    margin: 1.5rem 1rem 2.5rem 1rem;
+    @include mobile-paragraph;
+    color: $black;
+
+    @include tablet {
+      @include tablet-paragraph;
+      margin-right: 0;
+      margin-left: 1.5rem;
+    }
+    @include desktop {
+      margin-left: 0;
+    }
+    &--right {
+      @include tablet {
+        margin-left: 1.5rem;
+      }
+      @include desktop {
+        margin-left: 2.5rem;
+      }
+    }
+  }
+}
+.gallery {
+  background-color: $gallery-color;
+
+  @include desktop {
+    padding-bottom: 1.5rem;
+  }
+
+  &__title {
+    @include mobile-header;
+    margin: 2rem 1rem 1.5rem 1rem;
+    padding-top: 2rem;
+
+    @include tablet {
+      @include tablet-second-header;
+      margin-left: 1.5rem;
+    }
+
+    @include desktop {
+      margin: 2.5rem 11.25rem 4rem 11.25rem;
+    }
+  }
+  &__img {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-right: 1.5rem;
+    }
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 4rem 11.25rem 2.5rem 11.25rem;
+      padding: 0;
+    }
+
+    &-1 {
+      background-image: url(../../assets/Images/Photo-gallery-1.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-2 {
+      background-image: url(../../assets/Images/Photo-gallery-2.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-3 {
+      background-image: url(../../assets/Images/Photo-gallery-3.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-4 {
+      background: url(../../assets/Images/Photo-gallery-4.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-5 {
+      background: url(../../assets/Images/Photo-gallery-5.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-6 {
+      background: url(../../assets/Images/Photo-gallery-6.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-7 {
+      background: url(../../assets/Images/Photo-gallery-7.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-8 {
+      background: url(../../assets/Images/Photo-gallery-8.jpg);
+      @include gallery-img;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+    &-9 {
+      background: url(../../assets/Images/Photo-gallery-9.jpg);
+      @include gallery-img;
+      margin-bottom: 2.5rem;
+
+      @include tablet {
+        @include tablet-gallery__img-size;
+      }
+      @include desktop {
+        @include desktop-gallery__img-size;
+      }
+    }
+  }
+}
+.footer {
+  background-color: $black;
+  color: $white;
+  padding-left: 1rem;
+
+  @include tablet {
+    padding-left: 1.5rem;
+  }
+
+  @include desktop {
+    padding: 3rem 11.25rem 3.5rem 11.25rem;
+    width: 100%;
+  }
+  &__logo {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      margin-right: 1.5rem;
+    }
+
+    @include desktop {
+      width: 7.5rem;
+    }
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &--left {
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &--right {
+      display: flex;
+    }
+  }
+  &__header {
+    @include mobile-header;
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+      @include tablet-second-header;
+    }
+  }
+  &__bottom {
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  &__social-media {
+    display: flex;
+    @include tablet {
+      position: relative;
+      left: 7.5rem;
+    }
+    &__logo {
+      margin-left: 1rem;
+
+      @include tablet {
+        display: flex;
+        margin-left: 1.5rem;
+      }
+      @include desktop {
+        margin-right: 2rem;
+      }
+    }
+    @include tablet {
+      display: flex;
+      position: relative;
+      // top: 2.5rem;
+    }
+  }
+  &__copyright {
+    @include mobile-list-contact;
+
+    @include tablet {
+      display: flex;
+      @include tablet-list;
+    }
+    &--right {
+      @include tablet {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include mobile-list-contact;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
+  &__section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    @include tablet {
+      width: 14rem;
+      margin-right: 1.5rem;
+    }
+
+    @include desktop {
+      margin-right: 3.5rem;
+    }
+    &__name {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      @include mobile-list-contact;
+
+      @include tablet {
+        @include tablet-sub-header;
+      }
+
+      @include desktop {
+        margin-bottom: 1.5rem;
+      }
+    }
+    &__address {
+      @include tablet {
+        @include tablet-list;
+      }
+    }
+    &__email {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      @include tablet {
+        @include tablet-list;
+      }
+
+      @include desktop {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}
+.comments {
+  &-section {
+    @include tablet {
+      margin-left: 7.75rem;
+      margin-right: 7.75rem;
+    }
+    &__title {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      color: $black;
+      @include mobile-header;
+
+      @include tablet {
+        margin-top: 3rem;
+        @include tablet-second-header;
+      }
+
+      @include desktop {
+        margin: 3rem 0 3.5rem 3.5rem;
+      }
+    }
+  }
+}
+
+.likesContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 15%;
+}
+#comments-area {
+  width: 14rem;
+  border-radius: 5px;
+  @include mobile-paragraph--comments;
+
+  @include tablet {
+    width: 27.3rem;
+    @include tablet-paragraph--comments;
+  }
+  @include desktop {
+    width: 28.75rem;
+  }
+}
+#commentsButton {
+  width: 14rem;
+  background-color: $black;
+  height: 2.5rem;
+  color: $white;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  @include mobile-paragraph;
+  color: $white;
+
+  @include tablet {
+    width: 10rem;
+    @include tablet-paragraph;
+    color: $white;
+  }
+}
+.comments-form {
+  &__name-input {
+    width: 14rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+
+    @include mobile-paragraph--comments;
+
+    @include tablet {
+      width: 27.3rem;
+      height: 5rem;
+      @include tablet-paragraph--comments;
+    }
+
+    @include desktop {
+      width: 28.75rem;
+    }
+  }
+  &__top {
+    display: flex;
+    flex-direction: row;
+    @include mobile-paragraph--comments;
+
+    @include tablet {
+      @include tablet-paragraph--comments;
+    }
+
+    @include desktop {
+      margin-left: 23.25rem;
+      margin-right: 23.25rem;
+    }
+  }
+
+  &__img {
+    background-image: url(../../assets/Images/Photo-gallery-5.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    position: relative;
+    top: 3.5rem;
+    margin-left: 1rem;
+
+    @include desktop {
+      position: relative;
+      top: 1rem;
+      margin-right: 1.25rem;
+    }
+  }
+
+  &__container {
+    margin: 2.5rem 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+
+    @include tablet {
+      height: 16.75rem;
+    }
+
+    @include desktop {
+      margin: 0;
+    }
+    &-name {
+      width: 14rem;
+      color: #afafaf;
+      margin-bottom: 0.5rem;
+    }
+    &-comments {
+      color: #afafaf;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.posted__comments {
+  min-height: 7rem;
+
+  &-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 1rem;
+    width: 100%;
+    margin-bottom: 16px;
+    margin-top: 24px;
+
+    @include tablet {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    @include desktop {
+      margin-right: 23.25rem;
+      margin-left: 23.25rem;
+    }
+  }
+  &__box {
+    border-top: 2px solid #afafaf;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 150px;
+    @include mobile-paragraph--comments;
+
+    @include tablet {
+      display: flex;
+      justify-content: flex-start;
+      @include tablet-paragraph--comments;
+    }
+    @include desktop {
+      width: 32rem;
+      height: 120px;
+    }
+  }
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      justify-content: flex-start;
+    }
+  }
+}
+.person-img {
+  background-color: lightgray;
+  width: 4rem;
+  height: 3.2rem;
+  border-radius: 50px;
+  margin-right: 1rem;
+  margin-top: 24px;
+
+  @include tablet {
+    width: 3.11rem;
+  }
+}
+.comments__list {
+  width: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.comments-div {
+  &-left {
+    display: flex;
+    flex-direction: column;
+    width: 87%;
+  }
+  &-bottom {
+    overflow: scroll;
+  }
+}
+.time-style {
+  color: #afafaf;
+  @include tablet {
+    margin-left: 0.5rem;
+  }
+}
+.comments-btn__container {
+  @include tablet {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

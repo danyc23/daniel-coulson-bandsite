@@ -59,17 +59,17 @@ form.addEventListener("submit", (event) => {
 const commentArray = [
   {
     name: "Daniel",
-    timeStamp: Date.now(),
+    timestamp: Date.now(),
     comment: "Hi my name is Daniel",
   },
   {
     name: "Edwin",
-    timeStamp: Date.now(),
+    timestamp: Date.now(),
     comment: "Hi my name is Edwin",
   },
   {
     name: "Ari",
-    timeStamp: Date.now(),
+    timestamp: Date.now(),
     comment: "Hi my name is Ari",
   },
 ];
@@ -89,7 +89,7 @@ let addComment = function (comment, placeToPut) {
     nameElem.innerText = comment.name;
     //creating a new paragraph that is going to hold the date
     let dateElem = document.createElement("p");
-    dateElem.innerText = comment.timeStamp;
+    dateElem.innerText = new Date(comment.timestamp).toLocaleString();
     // creating a new paragraph hold the comment
     let commentElem = document.createElement("p");
     //giving the value of the comment
@@ -97,21 +97,27 @@ let addComment = function (comment, placeToPut) {
     // creating a div that is going to contain the name, date
     let commentContainer = document.createElement("div");
     commentContainer.className = "posted__comments-top";
+    //appending name element and date to its parent
+    commentContainer.appendChild(nameElem);
+    commentContainer.appendChild(dateElem);
     //creating a div that is going to hold the comment holder
     let commentsDivBottom = document.createElement("div");
     //giving a class to commentsDivBottom
     commentsDivBottom.className = "comments-div-bottom";
-    // appeding both p to its div
-    divContainer.appendChild(nameElem);
-    divContainer.appendChild(dateElem);
     // appeding the element the div to the li
     commentContainer.appendChild(divContainer);
-    //appending comment container to divcontainer
-    li.appendChild(profileImg);
-    li.appendChild(divContainer);
-    li.appendChild(commentsDivBottom);
     //appending the comment box to the bottom div
     commentsDivBottom.appendChild(commentElem);
+    //creating another div container that is going to separate de name and date from the paragraph
+    let commentsDivLeft = document.createElement("div");
+    //adding a class to commentDivTop
+    commentsDivLeft.className = "comments-div-left";
+    //appending coments div top and bottom to the left
+    commentsDivLeft.appendChild(commentContainer);
+    commentsDivLeft.appendChild(commentsDivBottom);
+
+    li.appendChild(profileImg);
+    li.appendChild(commentsDivLeft);
 
     // appending the li to the ul
     commentList.appendChild(li);
