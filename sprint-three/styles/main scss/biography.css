@@ -1008,6 +1008,7 @@ a:hover {
 
 @media (min-width: 768px) {
   .comments-section__title {
+    margin-left: 1.5rem;
     margin-top: 3rem;
     font-size: 24px;
     line-height: 32px;
@@ -1022,6 +1023,10 @@ a:hover {
   }
 }
 
+.likes {
+  margin-right: 0.3rem;
+}
+
 .likesContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1032,7 +1037,13 @@ a:hover {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  width: 15%;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .likesContainer {
+    width: 10%;
+  }
 }
 
 #comments-area {
@@ -1088,7 +1099,6 @@ a:hover {
 
 .comments-form__name-input {
   width: 14rem;
-  height: 2.5rem;
   border-radius: 5px;
   margin-bottom: 1rem;
   font-size: 13px;
@@ -1100,7 +1110,6 @@ a:hover {
 @media (min-width: 768px) {
   .comments-form__name-input {
     width: 27.3rem;
-    height: 5rem;
     font-size: 14px;
     line-height: 22px;
     font-family: "avenir";
@@ -1199,10 +1208,6 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-.posted__comments {
-  min-height: 7rem;
-}
-
 .posted__comments-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1252,7 +1257,6 @@ a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 150px;
   font-size: 13px;
   line-height: 18px;
   font-family: "avenir";
@@ -1277,7 +1281,6 @@ a:hover {
 @media (min-width: 1440px) {
   .posted__comments__box {
     width: 32rem;
-    height: 120px;
   }
 }
 
@@ -1319,6 +1322,10 @@ a:hover {
   width: 100%;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.comments__holder {
+  margin-bottom: 1.5rem;
 }
 
 .comments-div-left {

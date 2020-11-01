@@ -46,6 +46,8 @@ defaultComments.then((result) => {
     messageTime1.className = "time-style";
     //create another paragraph that is going to hold the value of the comment.
     let commentHolder1 = document.createElement("p");
+    //adding a class to the commentHolder1
+    commentHolder1.className = "comments__holder";
     // appending the name content to its parent element
     nameElement1.appendChild(document.createTextNode(nameDefault));
     // appending the comment content to its parent p element
@@ -134,6 +136,8 @@ form.addEventListener("submit", (event) => {
     messageTime.className = "time-style";
     //create another paragraph that is going to hold the value of the comment.
     let commentHolder = document.createElement("p");
+    // assigining a class to the comment holder
+    commentHolder.className = "comments__holder";
     // appending the name content to its parent element
     nameElement.appendChild(document.createTextNode(name));
     // appending the comment content to its parent p element

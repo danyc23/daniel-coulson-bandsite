@@ -541,6 +541,7 @@ a {
       @include mobile-header;
 
       @include tablet {
+        margin-left: 1.5rem;
         margin-top: 3rem;
         @include tablet-second-header;
       }
@@ -551,12 +552,17 @@ a {
     }
   }
 }
-
+.likes {
+  margin-right: 0.3rem;
+}
 .likesContainer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 15%;
+  margin-right: 0.5rem;
+  @include tablet {
+    width: 10%;
+  }
 }
 #comments-area {
   width: 14rem;
@@ -591,7 +597,7 @@ a {
 .comments-form {
   &__name-input {
     width: 14rem;
-    height: 2.5rem;
+    // height: 2.5rem;
     border-radius: 5px;
     margin-bottom: 1rem;
 
@@ -599,7 +605,7 @@ a {
 
     @include tablet {
       width: 27.3rem;
-      height: 5rem;
+      // height: 5rem;
       @include tablet-paragraph--comments;
     }
 
@@ -666,7 +672,7 @@ a {
 }
 
 .posted__comments {
-  min-height: 7rem;
+  // min-height: 7rem;
 
   &-section {
     display: flex;
@@ -693,7 +699,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 150px;
+    // height: 150px;
     @include mobile-paragraph--comments;
 
     @include tablet {
@@ -703,7 +709,7 @@ a {
     }
     @include desktop {
       width: 32rem;
-      height: 120px;
+      // height: 120px;
     }
   }
   &-top {
@@ -733,6 +739,9 @@ a {
   width: 100%;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+.comments__holder {
+  margin-bottom: 1.5rem;
 }
 .comments-div {
   &-left {
