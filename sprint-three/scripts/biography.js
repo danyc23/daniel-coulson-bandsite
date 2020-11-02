@@ -79,9 +79,28 @@ defaultComments.then((result) => {
     likesElem.className = "likes";
     //appending the time to the p element
     likesElem.appendChild(document.createTextNode(likes));
+    //creating a delete botton
+    let btn = document.createElement("button");
+    btn.innerText = "X";
+    btn.className = "delete__btn";
+    btn.addEventListener("click", function () {
+      axios.delete(
+        "https://project-1-api.herokuapp.com/comments/results.id?api_key=c257b061-5a87-4101-a7e3-8b88a9b8b673"
+      );
+    });
+    //creating a new div to add the delete btn
+    let deleteDiv = document.createElement("div");
+    deleteDiv.className = "delete__div";
+    deleteDiv.appendChild(btn);
+    //creating a new div to have the likes elem and likestitle elem
+    let likesDiv = document.createElement("div");
+    likesDiv.className = "likes__div";
+    likesDiv.appendChild(likesElem);
+    likesDiv.appendChild(likesTitleElem);
+    //appending the btn to the likes container
+    likesContainer.appendChild(deleteDiv);
     //appending the like title and the actual likes to its div parent
-    likesContainer.appendChild(likesElem);
-    likesContainer.appendChild(likesTitleElem);
+    likesContainer.appendChild(likesDiv);
     //apending name and date to its div parent
     commentsDivLeft1.appendChild(commentContainer1);
     commentsDivLeft1.appendChild(commentsDivBottom1);

@@ -452,6 +452,10 @@ a:hover {
   }
 }
 
+.gallery__img {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .gallery__img {
     display: -webkit-box;
@@ -484,9 +488,9 @@ a:hover {
   background-image: url(../../assets/Images/Photo-gallery-1.jpg);
   background-size: cover;
   background-position: center;
-  width: 18rem;
+  width: 100%;
   height: 10.125rem;
-  margin: 1.5rem 1rem 1rem 1rem;
+  margin: 1.5rem 0 1rem 0;
 }
 
 @media (min-width: 768px) {
@@ -510,9 +514,9 @@ a:hover {
   background-image: url(../../assets/Images/Photo-gallery-2.jpg);
   background-size: cover;
   background-position: center;
-  width: 18rem;
+  width: 100%;
   height: 10.125rem;
-  margin: 1.5rem 1rem 1rem 1rem;
+  margin: 1.5rem 0 1rem 0;
 }
 
 @media (min-width: 768px) {
@@ -536,9 +540,9 @@ a:hover {
   background-image: url(../../assets/Images/Photo-gallery-3.jpg);
   background-size: cover;
   background-position: center;
-  width: 18rem;
+  width: 100%;
   height: 10.125rem;
-  margin: 1.5rem 1rem 1rem 1rem;
+  margin: 1.5rem 0 1rem 0;
 }
 
 @media (min-width: 768px) {
@@ -562,9 +566,9 @@ a:hover {
   background: url(../../assets/Images/Photo-gallery-4.jpg);
   background-size: cover;
   background-position: center;
-  width: 18rem;
+  width: 100%;
   height: 10.125rem;
-  margin: 1.5rem 1rem 1rem 1rem;
+  margin: 1.5rem 0 1rem 0;
 }
 
 @media (min-width: 768px) {
@@ -588,9 +592,9 @@ a:hover {
   background: url(../../assets/Images/Photo-gallery-5.jpg);
   background-size: cover;
   background-position: center;
-  width: 18rem;
+  width: 100%;
   height: 10.125rem;
-  margin: 1.5rem 1rem 1rem 1rem;
+  margin: 1.5rem 0 1rem 0;
 }
 
 @media (min-width: 768px) {
@@ -614,9 +618,9 @@ a:hover {
   background: url(../../assets/Images/Photo-gallery-6.jpg);
   background-size: cover;
   background-position: center;
-  width: 18rem;
+  width: 100%;
   height: 10.125rem;
-  margin: 1.5rem 1rem 1rem 1rem;
+  margin: 1.5rem 0 1rem 0;
 }
 
 @media (min-width: 768px) {
@@ -640,9 +644,9 @@ a:hover {
   background: url(../../assets/Images/Photo-gallery-7.jpg);
   background-size: cover;
   background-position: center;
-  width: 18rem;
+  width: 100%;
   height: 10.125rem;
-  margin: 1.5rem 1rem 1rem 1rem;
+  margin: 1.5rem 0 1rem 0;
 }
 
 @media (min-width: 768px) {
@@ -666,9 +670,9 @@ a:hover {
   background: url(../../assets/Images/Photo-gallery-8.jpg);
   background-size: cover;
   background-position: center;
-  width: 18rem;
+  width: 100%;
   height: 10.125rem;
-  margin: 1.5rem 1rem 1rem 1rem;
+  margin: 1.5rem 0 1rem 0;
 }
 
 @media (min-width: 768px) {
@@ -692,9 +696,9 @@ a:hover {
   background: url(../../assets/Images/Photo-gallery-9.jpg);
   background-size: cover;
   background-position: center;
-  width: 18rem;
+  width: 100%;
   height: 10.125rem;
-  margin: 1.5rem 1rem 1rem 1rem;
+  margin: 1.5rem 0 1rem 0;
   margin-bottom: 2.5rem;
 }
 
@@ -1027,10 +1031,24 @@ a:hover {
   margin-right: 0.3rem;
 }
 
+.likes__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .likesContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1362,5 +1380,10 @@ a:hover {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+}
+
+.delete__btn {
+  margin-top: 0.5rem;
+  color: #323232;
 }
 /*# sourceMappingURL=biography.css.map */

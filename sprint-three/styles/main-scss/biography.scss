@@ -261,6 +261,7 @@ a {
     }
   }
   &__img {
+    width: 100%;
     @include tablet {
       display: flex;
       flex-wrap: wrap;
@@ -554,9 +555,14 @@ a {
 }
 .likes {
   margin-right: 0.3rem;
+  &__div {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .likesContainer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
   margin-right: 0.5rem;
@@ -764,4 +770,9 @@ a {
     display: flex;
     justify-content: flex-end;
   }
+}
+.delete__btn {
+  margin-top: 0.5rem;
+  // background-color: rgb(226, 124, 124);
+  color: $black;
 }
